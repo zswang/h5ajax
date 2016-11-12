@@ -1,0 +1,34 @@
+{
+  "name": "h5ajax",
+  "main": "h5ajax.js",
+  "description": "Ajax of mobile",
+  "author": [
+    {
+      "name": "zswang",
+      "url": "http://weibo.com/zswang"
+    },
+    {
+      "name": "meglad",
+      "url": "https://github.com/meglad"
+    }
+  ],
+  "license": "MIT",
+  "ignore": [
+    "src",
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/components",
+    "test",
+    "tests",
+    "gulpfile.js",
+    "example",
+    "tools"
+  ],
+  "version": "0.0.1",
+  "keywords": [
+    "mobile",
+    "ajax",
+    "h5"
+  ]
+}
