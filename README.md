@@ -33,9 +33,9 @@ h5ajax.post('http://localhost/user/info', { "code": "2016" }, function(err, json
 
 MIT © [zswang](http://weibo.com/zswang)
 
-[npm-url]: https://npmjs.org/package/h5tracker
-[npm-image]: https://badge.fury.io/js/h5tracker.svg
-[travis-url]: https://travis-ci.org/zswang/h5tracker
-[travis-image]: https://travis-ci.org/zswang/h5tracker.svg?branch=master
-[coverage-url]: https://coveralls.io/github/zswang/h5tracker?branch=master
-[coverage-image]: https://coveralls.io/repos/zswang/h5tracker/badge.svg?branch=master&service=github
+[npm-url]: https://npmjs.org/package/h5ajax
+[npm-image]: https://badge.fury.io/js/h5ajax.svg
+[travis-url]: https://travis-ci.org/zswang/h5ajax
+[travis-image]: https://travis-ci.org/zswang/h5ajax.svg?branch=master
+[coverage-url]: https://coveralls.io/github/zswang/h5ajax?branch=master
+[coverage-image]: https://coveralls.io/repos/zswang/h5ajax/badge.svg?branch=master&service=github
