@@ -5,7 +5,7 @@
    * Ajax of mobile
    * @author
    *   zswang (http://weibo.com/zswang)
-   * @version 0.0.2
+   * @version 0.0.5
    * @date 2016-11-14
    */
   var exports = {};
@@ -17,6 +17,12 @@
    * @param {string} method 方法
    * @param {Function} hook xhr 钩子
    * @param {Function=} callback 回调函数
+   * [[[
+   *   @param {string} err 错误信息，无错误时为 null
+   *   @param {Object} json 应答的 JSON 数据
+   *   @param {XMLHttpRequest} xhr XMLHttpRequest 实例
+   *   function callback()
+   * ]]]
    * @example send():base
     ```js
     // mock : {"status":200,"data":{"user_id":30001,"name":"zswang"}}
@@ -32,9 +38,12 @@
     ```
    * @example send():response is error
     ```js
-    h5ajax.send('http://localhost/error', 'GET', function (err, json) {
+    h5ajax.send('http://localhost/error', 'GET', null, function (err, json, xhr) {
       console.log(!!err);
       // > true
+      console.log(xhr.status);
+      // > 500
+      // * done
     });
     ```
    */
@@ -47,9 +56,9 @@
         var data = xhr.responseText;
         try {
           data = JSON.parse(data);
-          callback(null, data);
+          callback(null, data, xhr);
         } catch (ex) {
-          callback(ex.message, data);
+          callback(ex.message, data, xhr);
         }
       }
     };
@@ -63,6 +72,12 @@
    *
    * @param {string} url 请求链接
    * @param {Function=} callback 回调函数
+   * [[[
+   *   @param {string} err 错误信息，无错误时为 null
+   *   @param {Object} json 应答的 JSON 数据
+   *   @param {XMLHttpRequest} xhr XMLHttpRequest 实例
+   *   function callback()
+   * ]]]
    * @example get():base
     ```js
     // mock : {"status":200,"data":{"user_id":30001,"name":"zswang"}}
@@ -85,6 +100,12 @@
    * @param {string} url 请求链接
    * @param {string} params 请求参数
    * @param {Function=} callback 回调函数
+   * [[[
+   *   @param {string} err 错误信息，无错误时为 null
+   *   @param {Object} json 应答的 JSON 数据
+   *   @param {XMLHttpRequest} xhr XMLHttpRequest 实例
+   *   function callback()
+   * ]]]
    * @example post():base
     ```js
     // mock : {"status":200,"data":{"user_id":30001,"name":"zswang","code":$code}}

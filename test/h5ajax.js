@@ -29,11 +29,14 @@ describe("src/h5ajax.js", function () {
     h5ajax.send('http://localhost/user/info', 'GET');
   });
           
-  it("send():response is error", function () {
+  it("send():response is error", function (done) {
     examplejs_printLines = [];
-    h5ajax.send('http://localhost/error', 'GET', function (err, json) {
+    h5ajax.send('http://localhost/error', 'GET', null, function (err, json, xhr) {
       examplejs_print(!!err);
       assert.equal(examplejs_printLines.join("\n"), "true"); examplejs_printLines = [];
+      examplejs_print(xhr.status);
+      assert.equal(examplejs_printLines.join("\n"), "500"); examplejs_printLines = [];
+      done();
     });
   });
           

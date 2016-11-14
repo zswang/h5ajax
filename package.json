@@ -1,6 +1,6 @@
 {
   "name": "h5ajax",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "main": "h5ajax.js",
   "description": "Ajax of mobile",
   "repository": {

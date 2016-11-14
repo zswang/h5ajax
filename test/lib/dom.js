@@ -81,12 +81,13 @@ class XMLHttpRequest extends EventTarget {
     this._readyState = XHR_STATES.LOADING;
     this.dispatchEvent('readystatechange');
 
-    this._status = 200
-    this._statusText = 'OK';
-
     if (/error/.test(this._url)) {
+      this._status = 500;
       this._responseText = '#error';
     } else {
+      this._status = 200
+      this._statusText = 'OK';
+
       var code = data ? String(data).replace(/code=(\d+)/, '$1') : undefined;
       this._responseText = JSON.stringify({
         status: 200,
