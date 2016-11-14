@@ -1,6 +1,6 @@
 {
   "name": "h5ajax",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "h5ajax.js",
   "description": "Ajax of mobile",
   "repository": {
@@ -40,7 +40,6 @@
     "gulp": "^3.9.0",
     "gulp-examplejs": "^0.0.9",
     "gulp-jdists": "^0.0.5",
-    "gulp-open": "^2.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.5.3",
     "istanbul": "^0.3.17",

@@ -5,8 +5,8 @@
    * Ajax of mobile
    * @author
    *   zswang (http://weibo.com/zswang)
-   * @version 0.0.1
-   * @date 2016-11-13
+   * @version 0.0.2
+   * @date 2016-11-14
    */
   var exports = {};
   /*<function name="h5ajax_send">*/
